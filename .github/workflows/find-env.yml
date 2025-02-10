@@ -1,0 +1,21 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: 
+  push:
+  workflow_dispatch:
+  
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    environment: playground
+    permissions:
+      actions:     read  # required for qoomon/actions--context action
+      deployments: read  # required for qoomon/actions--context action
+      contents: read
+    steps:
+      - uses: qoomon/actions--context@v1
+        id: context
+
+      - run: |
+          echo "Current Environment: ${{ steps.context.outputs.environment }}"
+          echo "Job Logs: ${{ steps.context.outputs.job_log_url }}"
