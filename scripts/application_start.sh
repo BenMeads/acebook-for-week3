@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #give permission for everything in the express-app directory
-sudo chmod -R 777 /home/ec2-user/aceboo
+sudo chmod -R 777 /home/ec2-user/acebook
 
 #navigate into our working directory where we have all our github files
 cd /home/ec2-user/acebook
@@ -17,6 +17,7 @@ npm install
 #start our node app in the background
 npm start > app.out.log 2> app.err.log < /dev/null & 
 
-sudo systemctl start mongod
-
-sudo systemctl status mongo
+# commented out for testing later
+#sudo systemctl start mongod
+# commented out for testing later
+#sudo systemctl status mongo
