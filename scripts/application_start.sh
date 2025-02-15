@@ -20,4 +20,4 @@ npm start > app.out.log 2> app.err.log < /dev/null &
 
 sudo systemctl start mongod
 sudo systemctl enable mongod
-sudo systemctl status mongo
+sudo systemctl status mongod
