@@ -17,7 +17,7 @@ npm install
 #start our node app in the background
 npm start > app.out.log 2> app.err.log < /dev/null & 
 
-# commented out for testing later
-#sudo systemctl start mongod
-# commented out for testing later
-#sudo systemctl status mongo
+
+sudo systemctl start mongod
+sudo systemctl enable mongod
+sudo systemctl status mongo

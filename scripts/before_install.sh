@@ -19,15 +19,14 @@ fi
 # Create a MongoDB repository file for version 5.0
 # Mongo 5 does not work
 # echo "[mongodb-org-5.0]
-# name=MongoDB Repository
-# baseurl=https://repo.mongodb.org/yum/amazon/2/mongodb-org/5.0/x86_64/
-# gpgcheck=1
-# enabled=1
-#gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc" | sudo tee /etc/yum.repos.d/mongodb-org-5.0.repo
+echo "[mongodb-org-8.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/amazon/2023/mongodb-org/8.0/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://pgp.mongodb.com/server-8.0.asc" | sudo tee /etc/yum.repos.d/mongodb-org-5.0.repo
 
 # Install MongoDB Community Edition 5.0
-#sudo yum install -y mongodb-org
+sudo yum install -y mongodb-org
 
-# Start and enable the MongoDB service
-sudo systemctl start mongod
-sudo systemctl enable mongod
+
